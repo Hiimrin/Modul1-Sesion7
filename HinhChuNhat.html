@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<script>
+    let Rectangle = function (CDai , CRong) {
+        this.CDai = CDai;
+        this.getCDai = function () {
+            return CDai;
+        }
+        this.CRong = CRong;
+        this.getCrong = function () {
+            return CRong;
+        }
+        this.getArea = function () {
+            return (CRong * CDai);
+        }
+        this.getCvi = function () {
+            return (CDai * CRong) % 2;
+        }
+    };
+    let rectangle = new Rectangle(6,4);
+    let CDai = rectangle.getCDai();
+    let CRong = rectangle.getCrong();
+    let Area = rectangle.getArea();
+    let Cvi = rectangle.getCvi();
+    document.write("Area = " + Area + "Cvi = " + Cvi );
+</script>
+</body>
+</html>
